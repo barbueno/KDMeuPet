@@ -1,0 +1,166 @@
+.form-page {
+  max-width: 1000px; /* Um pouco mais largo para o form de 2 colunas */
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.form-header h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+.form-header p {
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+}
+
+/* --- Grid do Formulário --- */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Mobile: 1 coluna */
+  gap: 2.5rem;
+}
+
+/* --- Inputs Padrão  --- */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.form-group label,
+.form-group legend {
+  font-weight: 600;
+  color: var(--color-text-primary);
+  font-size: 1.1rem;
+}
+.form-group input[type="text"],
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-bg-white); /* Fundo branco no form */
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #9ca3af;
+}
+
+/* Radio Buttons Customizados */
+.radio-group {
+  display: flex;
+  gap: 1.5rem;
+}
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.radio-label input[type="radio"] {
+  display: none; /* Esconde o radio original */
+}
+.radio-custom {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--color-border);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  transition: all 0.2s ease;
+}
+.radio-custom::before { /* Círculo interno */
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--color-bg-white);
+  transform: scale(0);
+  transition: transform 0.2s ease;
+}
+.radio-label input[type="radio"]:checked + .radio-custom {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+.radio-label input[type="radio"]:checked + .radio-custom::before {
+  transform: scale(1);
+}
+
+/* --- Coluna da Direita: Upload e Mapa --- */
+.upload-area {
+  border: 2px dashed var(--color-border);
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  background-color: var(--color-bg-light);
+  cursor: pointer;
+}
+.upload-area i {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+.upload-area p {
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+
+.map-placeholder {
+  width: 100%;
+  height: 200px;
+  background-color: var(--color-bg-light);
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden; /* Isso seria o container do mapa real */
+}
+.map-pin {
+  font-size: 2.5rem;
+  color: var(--color-danger);
+}
+
+.location-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* Ações do Formulário */
+.form-actions {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+/* --- Classe de Acessibilidade --- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* --- Responsividade (Mobile-First) --- */
+
+/* Tablet e Desktop (>= 768px) */
+@media (min-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr 1fr; /* 2 colunas */
+    gap: 3rem;
+  }
+}

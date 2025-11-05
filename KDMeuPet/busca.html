@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Busca de Animais - KDMeuPet</title>
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="busca.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <header class="main-header">
+    <div class="header-content">
+      <img src="./assets/KDMeuPetLogo.png" alt="Logo KDMeuPet" class="logo"> <a href="cadastro.html" class="btn btn-primary">
+        <i class="fa-solid fa-plus"></i>
+        Cadastrar Novo Animal
+      </a>
+    </div>
+  </header>
+
+  <main class="container search-page">
+    <section class="search-filters" aria-labelledby="filter-title">
+      <h1 id="filter-title">Busca de Animais</h1>
+      <p>Encontre animais perdidos ou encontrados na sua região</p>
+      
+      <form class="filter-form">
+        <div class="form-group search-bar">
+          <label for="search-desc" class="sr-only">Buscar por descrição</label>
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="search" id="search-desc" placeholder="Buscar por descrição...">
+        </div>
+        
+        <div class="filter-dropdowns">
+          <div class="form-group">
+            <label for="filter-bairro">Bairro</label>
+            <select id="filter-bairro">
+              <option value="">Todos os bairros</option>
+              <option value="centro">Centro</option>
+              <option value="jardins">Jardins</option>
+              <option value="brooklin">Brooklin</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="filter-porte">Porte</label>
+            <select id="filter-porte">
+              <option value="">Todos os portes</option>
+              <option value="pequeno">Pequeno</option>
+              <option value="medio">Médio</option>
+              <option value="grande">Grande</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="filter-especie">Espécie</label>
+            <select id="filter-especie">
+              <option value="">Todas as espécies</option>
+              <option value="cachorro">Cachorro</option>
+              <option value="gato">Gato</option>
+              <option value="coelho">Coelho</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="filter-toggles">
+          <div class="toggle-buttons">
+            <button type="button" class="btn-toggle active" aria-pressed="true">Todos</button>
+            <button type="button" class="btn-toggle" aria-pressed="false">Perdidos</button>
+            <button type="button" class="btn-toggle" aria-pressed="false">Encontrados</button>
+          </div>
+          <div class="filter-actions">
+            <button type="reset" class="btn btn-secondary">Limpar Filtros</button>
+            <button type="submit" class="btn btn-primary">Aplicar Filtros</button>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <section class="search-results" aria-labelledby="results-title">
+      <div class="results-header">
+        <h2 id="results-title">Exibindo 12 resultados</h2>
+        <div class="form-group">
+          <label for="sort-by" class="sr-only">Ordenar por</label>
+          <select id="sort-by">
+            <option value="recentes">Mais recentes</option>
+            <option value="antigos">Mais antigos</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="results-grid">
+        <article class="pet-card">
+          <figure>
+            <img src="./assets/vira-lata.jpg" alt="Cachorro vira-lata pequeno">
+            <span class="status-tag status-perdido">Perdido</span>
+          </figure>
+          <div class="card-content">
+            <h3>Desconhecido</h3>
+            <p class="card-details">Vira-lata - Pequeno</p>
+            <p class="card-location"><i class="fa-solid fa-location-dot"></i> Centro</p>
+            <div class="card-footer">
+              <small>20/05/2023</small>
+              <a href="#" class="card-link">Ver detalhes</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="pet-card">
+          <figure>
+            <img src="./assets/persa.jpg" alt="Gato Persa médio">
+            <span class="status-tag status-encontrado">Encontrado</span>
+          </figure>
+          <div class="card-content">
+            <h3>Desconhecido</h3>
+            <p class="card-details">Persa - Médio</p>
+            <p class="card-location"><i class="fa-solid fa-location-dot"></i> Brooklin</p>
+            <div class="card-footer">
+              <small>19/05/2023</small>
+              <a href="#" class="card-link">Ver detalhes</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="pet-card">
+          <figure>
+            <img src="./assets/coelho.jpg" alt="Coelho pequeno">
+            <span class="status-tag status-encontrado">Encontrado</span>
+          </figure>
+          <div class="card-content">
+            <h3>Desconhecido</h3>
+            <p class="card-details">Coelho - Pequeno</p>
+            <p class="card-location"><i class="fa-solid fa-location-dot"></i> Jardins</p>
+            <div class="card-footer">
+              <small>19/05/2023</small>
+              <a href="#" class="card-link">Ver detalhes</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="pet-card">
+          <figure>
+            <img src="./assets/luna.jpg" alt="Gato Siamês pequeno">
+            <span class="status-tag status-perdido">Perdido</span> </figure>
+          <div class="card-content">
+            <h3>Luna</h3>
+            <p class="card-details">Siamês - Pequeno</p>
+            <p class="card-location"><i class="fa-solid fa-location-dot"></i> Vila Mariana</p>
+            <div class="card-footer">
+              <small>18/05/2023</small>
+              <a href="#" class="card-link">Ver detalhes</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
