@@ -1,6 +1,6 @@
 # KDMeuPet
 
-##🐾 Visão Geral  
+## 🐾 Visão Geral  
 Projeto de extenção da Faculdade de Tecnologia da Informação em HTML + CSS
 uma landing ou página estática chamada “KDMeuPet”, voltada ao tema de pets/animal de estimação.
 
@@ -8,4 +8,4 @@ uma landing ou página estática chamada “KDMeuPet”, voltada ao tema de pets
 - HTML  
 - CSS 
 
-###Em breve no ar...
+### Em breve no ar...
